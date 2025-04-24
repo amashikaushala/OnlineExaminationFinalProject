@@ -1,0 +1,15 @@
+package edu.icet.repository;
+
+import edu.icet.model.Question;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import javax.swing.text.html.Option;
+import java.util.List;
+
+@Repository
+public interface OptionRepository extends JpaRepository<Option, Long> {
+    List<Option> findByQuestion(Question question);
+}
+
+
